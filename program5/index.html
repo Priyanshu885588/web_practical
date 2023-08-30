@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "utf-8" ?> <!-- lab5.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Putta">
+    <title>Animal Stacking</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .dog {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            z-index: 0;
+        }
+
+        .cat {
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            z-index: 1;
+        }
+
+        .horse {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 2;
+        }
+    </style>
+    <script>
+        var topIndex = 2;
+        function moveToTop(picture) {
+            picture.style.zIndex = ++topIndex;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Image Overlap Demo</h1>
+    <div id="image-container">
+        <img id="dog" class="dog" src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" onmouseover="moveToTop(this)" width=" 400" height="300">
+        <img id="cat" class="cat" src="https://th-thumbnailer.cdn-si-edu.com/bZAar59Bdm95b057iESytYmmAjI=/1400x1050/filters:focal(594x274:595x275)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/95/db/95db799b-fddf-4fde-91f3-77024442b92d/egypt_kitty_social.jpg" onmouseover="moveToTop(this)" width=" 400" height="300">
+        <img id="horse" class="horse" src="https://img.freepik.com/free-photo/white-horse-runs-beach_1340-34263.jpg?t=st=1693420642~exp=1693424242~hmac=fb50212b23f75cddb077eaaf0b8bead7825cba395810628c9d33c24998dbd30d&w=1060" onmouseover="moveToTop(this)" width="400" height="300">
+    </div>
+</body>
+
+</html>
